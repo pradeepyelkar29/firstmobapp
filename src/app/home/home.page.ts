@@ -7,6 +7,11 @@ import { DataService, Message } from '../services/data.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  testvar1 = 'Test Variable 1';
+  chqMale = ' Male';
+  chqFemale = ' Female';
+  
+  
   constructor(private data: DataService) {}
 
   refresh(ev) {
@@ -19,4 +24,5 @@ export class HomePage {
     return this.data.getMessages();
   }
 
+  
 }

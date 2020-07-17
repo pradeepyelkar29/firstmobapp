@@ -1,25 +1,68 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Inbox
+      Home Page
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
-    <ion-refresher-content></ion-refresher-content>
-  </ion-refresher>
   
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">
-        Inbox
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      <ion-card-title>Card Title</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+      
+      <!-- <img src="https://images.pexels.com/photos/269323/pexels-photo-269323.jpeg"> -->
+      <img src="../../assets/img/insp.jpg">
+      
+      <ion-button expand="full">Full Button</ion-button>
+    </ion-card-content>
+  </ion-card>
+ 
+
   
   <ion-list>
-    <app-message *ngFor="let message of getMessages()" [message]="message"></app-message>
+    <!-- <app-message *ngFor="let message of getMessages()" [message]="message"></app-message> -->
+    
   </ion-list>
+
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col class="ion-padding-start">
+        <ion-checkbox checked="true"></ion-checkbox>
+    <ion-label>{{chqMale}} </ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-checkbox checked="false"></ion-checkbox>
+        <ion-label>{{chqFemale}}</ion-label>
+      </ion-col>
+      
+    </ion-row>
+   </ion-grid>
+
+  <br>
+  <ion-button>
+    {{testvar1}}
+    <ion-icon slot="end" name="star"></ion-icon>
+  </ion-button>
+
+ <br>
+
+ 
+
+ <br>
+
+ <ion-item detail>
+  <ion-label>
+    Standard Item with Detail Arrow
+  </ion-label>
+</ion-item>
+
 </ion-content>

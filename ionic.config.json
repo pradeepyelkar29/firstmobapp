@@ -1,5 +1,7 @@
 {
   "name": "firstmobapp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
